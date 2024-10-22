@@ -39,7 +39,7 @@ class DailyTrackApp extends StatelessWidget {
           locale: const Locale('ar'),
           title: 'daliy tasks',
           initialRoute:
-                Routes.homeScreen ,
+                Routes.onBoardingScreen ,
         );
       },
     );
