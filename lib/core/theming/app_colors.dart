@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-const blue = Color(0xff94c85d);
-const babyblue = Color(0xff3266CE);
-const lightblue = Color(0xff3A4CBA);
+const prymary = Color(0xffFF8FAB);
+const purple1 = Color(0xffFFC2D1);
+const purple2 = Color(0xff3A4CBA);
 const white = Color(0xffFFFFFF);
 const offwhite = Color(0xffD9D9D9);
 const black = Color(0xff000000);
-const purple = Color(0xffC65BCF);
+const purple3 = Color(0xffFF8FAB);
+const purple4 = Color(0xffff4d6d);
 const darkgray = Color(0xff909090);
 const lightgray = Color(0xff8F8F8F);
 const gray = Color(0xff818181);

@@ -5,7 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/routing/route.dart';
 import 'core/theming/app_colors.dart';
+import 'features/add_info/ui/screen/add_info_view.dart';
+import 'features/add_info/ui/widgets/add_enfo_body.dart';
+import 'features/home_page/ui/screens/home_page.dart';
 import 'generated/l10n.dart';
+
 class DailyTrackApp extends StatelessWidget {
   final AppRouter appRouter;
   // final bool isLoggedIn;
@@ -25,7 +29,7 @@ class DailyTrackApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            primaryColor: blue,
+            primaryColor: prymary,
             scaffoldBackgroundColor: white,
           ),
           onGenerateRoute: appRouter.generateRoute,
@@ -38,8 +42,10 @@ class DailyTrackApp extends StatelessWidget {
           supportedLocales: S.delegate.supportedLocales,
           locale: const Locale('ar'),
           title: 'daliy tasks',
-          initialRoute:
-                Routes.onBoardingScreen ,
+          // initialRoute:
+          //       Routes.onBoardingScreen ,
+          // home: const Addinfo(),
+          home: const AddMemberView(),
         );
       },
     );
