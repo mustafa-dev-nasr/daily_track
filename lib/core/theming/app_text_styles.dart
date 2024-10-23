@@ -6,72 +6,72 @@ import '../helpers/util/font_wiegth_helper.dart';
 
 class AppTextStyles {
   static TextStyle font36BlueMedium = TextStyle(
-    color: blue,
+    color: prymary,
     fontSize: 36.sp,
     fontWeight: FontWeightHelper.medium,
   );
   static TextStyle font36PurpleMedium = TextStyle(
-    color: purple,
+    color: purple3,
     fontSize: 36.sp,
     fontWeight: FontWeightHelper.medium,
   );
   static TextStyle font96BlueMedium = TextStyle(
-    color: blue,
+    color: prymary,
     fontSize: 96.sp,
     fontWeight: FontWeightHelper.medium,
   );
   static TextStyle font96PurpleMedium = TextStyle(
-    color: purple,
+    color: purple3,
     fontSize: 96.sp,
     fontWeight: FontWeightHelper.medium,
   );
   static TextStyle font16BlueRegular = TextStyle(
-    color: blue,
+    color: prymary,
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.regular,
   );
   static TextStyle font20BlueSemibold = TextStyle(
-    color: blue,
+    color: prymary,
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.semiBold,
   );
   static TextStyle font16BlueMedium = TextStyle(
-    color: blue,
+    color: prymary,
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.medium,
   );
   static TextStyle font24BlueMedium = TextStyle(
-    color: blue,
+    color: prymary,
     fontSize: 24.sp,
     fontWeight: FontWeightHelper.medium,
   );
   static TextStyle font16LightblueRegular = TextStyle(
-    color: lightblue,
+    color: purple2,
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.regular,
   );
   static TextStyle font16LightblueMedium = TextStyle(
-    color: lightblue,
+    color: purple2,
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.medium,
   );
   static TextStyle font20BlueSemiBold = TextStyle(
-    color: lightblue,
+    color: purple2,
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.semiBold,
   );
   static TextStyle font16LightblueSemibold = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.semiBold,
-    color: lightblue,
+    color: purple2,
   );
   static TextStyle font36BlueSemiBold = TextStyle(
-    color: lightblue,
+    color: purple2,
     fontSize: 36.sp,
     fontWeight: FontWeightHelper.semiBold,
   );
   static TextStyle font20BlueRegular = TextStyle(
-    color: lightblue,
+    color: purple2,
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.regular,
   );

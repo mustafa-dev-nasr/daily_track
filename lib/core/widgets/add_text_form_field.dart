@@ -40,7 +40,6 @@ class AppTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-    
       controller: controller,
       keyboardType: isNumericKeyboard == true
           ? const TextInputType.numberWithOptions(decimal: false)
@@ -52,7 +51,7 @@ class AppTextFormField extends StatelessWidget {
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: blue,
+                color: prymary,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(16.0),
@@ -60,7 +59,7 @@ class AppTextFormField extends StatelessWidget {
         enabledBorder: enabledBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: blue,
+                color: prymary,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(16.0),
