@@ -29,7 +29,7 @@ class OnboardingScreen extends StatelessWidget {
               "Effortlessly organize your tasks",
               style: AppTextStyles.font20BlackMedium,
             ),
-            40.verticalSpace,
+            60.verticalSpace,
             AppTextButton(
               onPressed: () {
                 context.pushNamed(Routes.homeScreen);
