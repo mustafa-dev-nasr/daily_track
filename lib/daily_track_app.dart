@@ -5,9 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/routing/route.dart';
 import 'core/theming/app_colors.dart';
-import 'features/add_info/ui/screen/add_info_view.dart';
-import 'features/add_info/ui/widgets/add_enfo_body.dart';
 import 'features/home_page/ui/screens/home_page.dart';
+import 'features/onboarding/ui/screens/onboarding_screen.dart';
 import 'generated/l10n.dart';
 
 class DailyTrackApp extends StatelessWidget {
@@ -29,8 +28,21 @@ class DailyTrackApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            primaryColor: prymary,
-            scaffoldBackgroundColor: white,
+            scaffoldBackgroundColor: const Color(0xFFEEF1F8),
+            primarySwatch: Colors.blue,
+            fontFamily: "Intel",
+            elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ElevatedButton.styleFrom(foregroundColor: Colors.white),
+            ),
+            inputDecorationTheme: const InputDecorationTheme(
+              filled: true,
+              fillColor: Colors.white,
+              errorStyle: TextStyle(height: 0),
+              // border: defaultInputBorder,
+              // enabledBorder: defaultInputBorder,
+              // focusedBorder: defaultInputBorder,
+              // errorBorder: defaultInputBorder,
+            ),
           ),
           onGenerateRoute: appRouter.generateRoute,
           localizationsDelegates: const [
@@ -42,10 +54,10 @@ class DailyTrackApp extends StatelessWidget {
           supportedLocales: S.delegate.supportedLocales,
           locale: const Locale('ar'),
           title: 'daliy tasks',
-          // initialRoute:
-          //       Routes.onBoardingScreen ,
-          // home: const Addinfo(),
-          home: const AddMemberView(),
+          initialRoute: Routes.onBoardingScreen,
+          // home: const OnboardingScreen(),
+          // // home: const Addinfo(),
+          // home: const AddMemberView(),
         );
       },
     );

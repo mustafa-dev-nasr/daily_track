@@ -7,7 +7,9 @@ plugins {
 android {
     namespace = "com.example.daily_track"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+
+    // Override Flutter's NDK version and set the required one
+    ndkVersion = "25.1.8937393"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17

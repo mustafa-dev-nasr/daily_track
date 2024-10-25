@@ -1,9 +1,7 @@
 import 'package:daily_track/core/helpers/extensions/app_navigotion.dart';
-import 'package:daily_track/core/theming/app_text_styles.dart';
 import 'package:daily_track/core/widgets/add_text_form_field.dart';
-import 'package:daily_track/features/add_info/ui/widgets/add_image.dart';
+import 'package:daily_track/features/onboarding/ui/widgets/add_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/routing/route.dart';
@@ -38,6 +36,15 @@ class _CenterAddMemberBodyState extends State<CenterAddMemberBody> {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
+            const Text(
+              "Daily Track",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.w700,
+                fontFamily: "Poppins",
+                height: 1.2,
+              ),
+            ),
             AddImage(
               onImageSelected: (String imagePath) {
                 setState(() {
@@ -45,41 +52,38 @@ class _CenterAddMemberBodyState extends State<CenterAddMemberBody> {
                 });
               },
             ),
-
-            120.verticalSpace,
+            50.verticalSpace,
             AppTextFormField(
-                hintText: "الاسم",
+                hintText: "Name",
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return "لا يمكن أن يكون فارغا";
+                    return "Can't be empty";
                   }
                   return null;
                 }),
-
-            // AddImage(onImageSelected: onImageSelected), // إضافة AddImage هنا
             50.verticalSpace,
-            Align(
-              child: EndAddMember(
-                onTap: () {
-                  if (formKey.currentState!.validate()) {
-                    context.pushReplacementNamed(Routes.homeScreen);
-                    // formKey.currentState!.save();
-                    // var contactModel = ContactModel(
-                    //   name: name!,
-                    // );
+            EndAddMember(
+              onTap: () {
+                if (formKey.currentState!.validate()) {
+                  context.pushNamedAndRemoveUntil(
+                    Routes.homeScreen,
+                    (Route<dynamic> route) => false,
+                  ); // formKey.currentState!.save();
+                  // var contactModel = ContactModel(
+                  //   name: name!,
+                  // );
 
-                    // BlocProvider.of<AddMemberCubit>(context).addMember(
-                    //   member: contactModel, // تمرير الشخص الجديد كمعامل 'member'
-                    //   imagePath: _imagePath, // تمرير مسار الصورة
-                    // );
-                    // BlocProvider.of<MemberCubit>(context).fetchAllMember();
-                  } else {
-                    setState(() {
-                      autovalidateMode = AutovalidateMode.always;
-                    });
-                  }
-                },
-              ),
+                  // BlocProvider.of<AddMemberCubit>(context).addMember(
+                  //   member: contactModel, // تمرير الشخص الجديد كمعامل 'member'
+                  //   imagePath: _imagePath, // تمرير مسار الصورة
+                  // );
+                  // BlocProvider.of<MemberCubit>(context).fetchAllMember();
+                } else {
+                  setState(() {
+                    autovalidateMode = AutovalidateMode.always;
+                  });
+                }
+              },
             ),
           ],
         ),
